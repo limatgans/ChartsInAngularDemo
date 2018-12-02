@@ -1,8 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
+// Components
 import { AppComponent } from './app.component';
 import { ChartComponent } from './chart/chart.component';
+
+// Routes
+import { routes } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +15,8 @@ import { ChartComponent } from './chart/chart.component';
     ChartComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
